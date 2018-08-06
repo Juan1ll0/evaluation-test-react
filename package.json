@@ -1,0 +1,36 @@
+{
+  "name": "react-custom-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "recompose": "^0.28.2",
+    "redux": "^4.0.0",
+    "redux-api-middleware": "^2.3.0",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^3.0.1"
+  },
+  "scripts": {
+    "start": "sh -ac '. .env.${REACT_APP_ENV}; react-scripts start'",
+    "start:local": "REACT_APP_ENV=local npm run start",
+    "start:development": "REACT_APP_ENV=development npm run start",
+    "start:staging": "REACT_APP_ENV=staging npm run start",
+    "start:production": "REACT_APP_ENV=production npm run start",
+    "start:test": "REACT_APP_ENV=test npm run start",
+    "build": "sh -ac '. .env.${REACT_APP_ENV}; react-scripts build'",
+    "build:clean": "rm -rf build/*",
+    "build:development": "npm run build:clean && REACT_APP_ENV=development npm run build",
+    "build:local": "npm run build:clean && REACT_APP_ENV=local npm run build",
+    "build:staging": "npm run build:clean && REACT_APP_ENV=staging npm run build",
+    "build:production": "npm run build:clean && REACT_APP_ENV=production npm run build",
+    "serve": "serve -s build -p 3000",
+    "prettier": "prettier --print-width 120 --single-quote --tab-width 2 src/**/*.js --write",
+    "test": "REACT_APP_ENV=test; react-scripts test --env=jsdom --coverage --verbose",
+    "tdd": "REACT_APP_ENV=test; react-scripts test --env=jsdom --watch --verbose",
+    "eject": "react-scripts eject"
+  }
+}
