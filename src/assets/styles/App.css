@@ -37,10 +37,11 @@
   color: blue;
 }
 
+.App-list-item {
+  list-style: none;
+}
+
 .App-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 10px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;

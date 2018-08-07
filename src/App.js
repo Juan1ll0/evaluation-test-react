@@ -9,7 +9,7 @@ import environment from './environment';
 import DefaultTemplate from 'components/layouts/default';
 
 // Pages
-import Page1 from 'components/pages/page1';
+import Page1 from 'components/context/page1';
 import Page2 from 'components/pages/page2';
 
 export default () => (
