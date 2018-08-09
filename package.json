@@ -1,10 +1,50 @@
 {
-  "name": "react-custom-boilerplate",
+  "name": "boxto",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**",
+      "!**/src/assets/**",
+      "!**/node_modules/**",
+      "!**/__fixtures__/**",
+      "!**/__tests__/**",
+      "!**/src/*.js",
+      "!**/src/store/**",
+      "!**/src/components/context/pages/**",
+      "!**/build/**",
+      "!**/coverage/**",
+      "!**/registerServiceWorker.js",
+      "!**/src/modules/lot/constants.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      },
+      "./src/components/": {
+        "branches": 40,
+        "statements": 40
+      },
+      "./src/reducers/**/*.js": {
+        "statements": 100
+      },
+      "./src/utils": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-image": "^1.4.0",
+    "react-modal": "^3.5.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
@@ -29,8 +69,11 @@
     "build:production": "npm run build:clean && REACT_APP_ENV=production npm run build",
     "serve": "serve -s build -p 3000",
     "prettier": "prettier --print-width 120 --single-quote --tab-width 2 src/**/*.js --write",
-    "test": "REACT_APP_ENV=test; react-scripts test --env=jsdom --coverage --verbose",
-    "tdd": "REACT_APP_ENV=test; react-scripts test --env=jsdom --watch --verbose",
+    "test": "REACT_APP_ENV=test react-scripts test --env=jsdom --coverage --verbose",
+    "tdd": "REACT_APP_ENV=test react-scripts test --env=jsdom --watch --verbose",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "deep-freeze": "^0.0.1"
   }
 }

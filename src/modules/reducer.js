@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
 // Defined reducers
-import todos from 'modules/todos';
+import tutorial from 'modules/tutorial';
 
-export default combineReducers({ todos });
+export default combineReducers({ tutorial });

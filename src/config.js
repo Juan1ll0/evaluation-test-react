@@ -1,1 +1,1 @@
-export const APP_NAME = 'boilerplate';
+export const APP_NAME = 'botxo';
